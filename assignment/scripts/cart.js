@@ -15,8 +15,15 @@ function listItems( array ) {
     }
 }
 
+// First Iteration, empties the array but isn't permanent
+// function empty( array ) {
+//     array = [];
+//     return array;
+// }
+
+//Second Iteration, empties the array and is permanent
 function empty( array ) {
-    array = [];
+    array.length = 0;
     return array;
 }
 
@@ -34,5 +41,18 @@ let testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
 listItems( testArray );
 listItems( basket );
 
-//Testing for empty()
-console.log( empty( testArray ) );
+//Testing for empty() the first iteration
+// empty( testArray );
+// console.log( testArray );
+
+// console.log( basket );
+// console.log( empty( basket ) );
+// console.log( basket );
+
+//Testing for empty() the second iteration
+// empty( testArray );
+// console.log( testArray );
+
+empty( basket );
+addItem( 'mango' );
+console.log( basket );
