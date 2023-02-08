@@ -2,6 +2,7 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 let basket = [];
+const maxItems = 5;
 
 //Functions
 function addItem( item ) {
@@ -15,13 +16,13 @@ function listItems( array ) {
     }
 }
 
-// First Iteration, empties the array but isn't permanent
+// First Iteration of empty(), empties the array but isn't permanent
 // function empty( array ) {
 //     array = [];
 //     return array;
 // }
 
-//Second Iteration, empties the array and is permanent
+//Second Iteration of empty(), empties the array and is permanent
 function empty( array ) {
     array.length = 0;
     return array;
