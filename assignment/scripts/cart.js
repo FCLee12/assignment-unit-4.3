@@ -28,3 +28,11 @@ console.log( addItem( 'oranges' ) );
 console.log( `Items in your basket are now: ${basket}` );
 console.log( addItem( 'bananas' ) );
 console.log( `Items in your basket are now: ${basket}` );
+
+//Testing for listItems()
+let testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
+listItems( testArray );
+listItems( basket );
+
+//Testing for empty()
+console.log( empty( testArray ) );
