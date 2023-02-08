@@ -50,9 +50,12 @@ listItems( basket );
 // console.log( basket );
 
 //Testing for empty() the second iteration
-// empty( testArray );
-// console.log( testArray );
+console.log( 'before empty()', testArray );
+empty( testArray );
+console.log( 'after empty()', testArray );
 
+console.log( 'before empty()', basket );
 empty( basket );
+console.log( 'after empty()', basket );
 addItem( 'mango' );
-console.log( basket );
+console.log( 'after addItem()', basket );
