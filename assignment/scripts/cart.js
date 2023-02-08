@@ -3,6 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 let basket = [];
 
+//Functions
 function addItem( item ) {
     basket.push( item );
     return true;
@@ -18,3 +19,12 @@ function empty( array ) {
     array = [];
     return array;
 }
+
+//TEST ZONE
+//Testing for addItem()
+console.log( addItem( 'apple' ) );
+console.log( `Items in your basket are now: ${basket}` );
+console.log( addItem( 'oranges' ) );
+console.log( `Items in your basket are now: ${basket}` );
+console.log( addItem( 'bananas' ) );
+console.log( `Items in your basket are now: ${basket}` );
