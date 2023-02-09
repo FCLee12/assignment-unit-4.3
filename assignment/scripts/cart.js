@@ -105,29 +105,29 @@ console.log( 'after addItem()', basket );
 //***** Testing for isFull() *****
 console.log('***** Testing for isFull() *****');
 
-testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
-console.log( isFull( testArray.length ) );
+let testArray2 = ['cat', 'dog', 'bird', 90, 321, true, false];
+console.log( isFull( testArray2.length ) );
 console.log( isFull( basket.length ) );
 
 //***** Testing for stretch goal updated addItem() *****
 console.log( '***** Testing for stretch goal updated addItem() *****' );
 
-console.log( addItem( testArray, 1 ) );
+console.log( addItem( testArray2, 1 ) );
 
-empty( testArray );
+empty( testArray2 );
 
-console.log( addItem( testArray, 1 ) );
-console.log( testArray );
+console.log( addItem( testArray2, 1 ) );
+console.log( testArray2 );
 
 //***** Testing for stretch goal removeItem() *****
 console.log( '***** Testing for stretch goal removeItem() *****' );
 
-testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
-console.log( testArray );
-console.log( 'this should read 90:', removeItem( testArray, 90 ) );
-console.log( testArray );
+let testArray3 = ['cat', 'dog', 'bird', 90, 321, true, false];
+console.log( testArray3 );
+console.log( 'this should read 90:', removeItem( testArray3, 90 ) );
+console.log( testArray3 );
 
-console.log( 'this should read null:', removeItem( testArray, 'octopus' ) );
+console.log( 'this should read null:', removeItem( testArray3, 'octopus' ) );
 
 console.log( basket );
 addItem( basket, 'strawberry' );
