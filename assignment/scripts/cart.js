@@ -51,11 +51,11 @@ function addItem( array, item ) {
 
 function removeItem( array, item ) {
     let placement = array.indexOf( item );
-    console.log( placement );
+    console.log( placement ); //added to verify indexOf()
     let removedItem;
     if ( placement > -1 ) {
         removedItem = array.splice( placement, 1 );
-        console.log( removedItem );
+        console.log( removedItem ); //added to verify returned array with removed item
         return removedItem.pop();
     } else {
         return null;
@@ -124,5 +124,15 @@ console.log( '***** Testing for stretch goal removeItem() *****' );
 
 testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
 console.log( testArray );
-console.log( removeItem( testArray, 90 ) );
+console.log( 'this should read 90:', removeItem( testArray, 90 ) );
 console.log( testArray );
+
+console.log( 'this should read null:', removeItem( testArray, 'octopus' ) );
+
+console.log( basket );
+addItem( basket, 'strawberry' );
+addItem( basket, 'kiwi' );
+addItem( basket, 'watermelon' );
+addItem( basket, 'liver' );
+console.log( basket );
+console.log( 'this should read liver:', removeItem( basket, 'liver' ) );
