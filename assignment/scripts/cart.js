@@ -13,7 +13,7 @@ const maxItems = 5;
 // }
 
 function listItems( array ) {
-    for( item of array ) {
+    for( let item of array ) {
         console.log( item );
     }
 }
