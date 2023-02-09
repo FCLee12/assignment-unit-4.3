@@ -49,6 +49,19 @@ function addItem( array, item ) {
     }
 }
 
+function removeItem( array, item ) {
+    let placement = array.indexOf( item );
+    console.log( placement );
+    let removedItem;
+    if ( placement > -1 ) {
+        removedItem = array.splice( placement, 1 );
+        console.log( removedItem );
+        return removedItem.pop();
+    } else {
+        return null;
+    }
+}
+
 //TEST ZONE
 
 //***** Testing for addItem() *****
@@ -104,4 +117,12 @@ console.log( addItem( testArray, 1 ) );
 empty( testArray );
 
 console.log( addItem( testArray, 1 ) );
+console.log( testArray );
+
+//***** Testing for stretch goal removeItem() *****
+console.log( '***** Testing for stretch goal removeItem() *****' );
+
+testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
+console.log( testArray );
+console.log( removeItem( testArray, 90 ) );
 console.log( testArray );
