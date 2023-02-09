@@ -6,10 +6,11 @@ const maxItems = 5;
 
 //Functions
 
-function addItem( item ) {
-    basket.push( item );
-    return true;
-}
+//Original version of addItem()
+// function addItem( item ) {
+//     basket.push( item );
+//     return true;
+// }
 
 function listItems( array ) {
     for( item of array ) {
@@ -37,16 +38,27 @@ function isFull( length ) {
     }
 }
 
+//Updated addItem() for stretch goal
+function addItem( array, item ) {
+    if( isFull(array.length) ) {
+        console.log( 'Your basket is full, please empty some items and try again!' );
+        return false;
+    } else {
+        array.push( item );
+        return true;
+    }
+}
+
 //TEST ZONE
 
 //***** Testing for addItem() *****
 console.log('***** Testing for listItems() *****');
 
-console.log( addItem( 'apple' ) );
+console.log( addItem( basket, 'apple' ) );
 console.log( `Items in your basket are now: ${basket}` );
-console.log( addItem( 'oranges' ) );
+console.log( addItem( basket, 'oranges' ) );
 console.log( `Items in your basket are now: ${basket}` );
-console.log( addItem( 'bananas' ) );
+console.log( addItem( basket, 'bananas' ) );
 console.log( `Items in your basket are now: ${basket}` );
 
 //***** Testing for listItems() *****
@@ -74,7 +86,7 @@ console.log( 'after empty()', testArray );
 console.log( 'before empty()', basket );
 empty( basket );
 console.log( 'after empty()', basket );
-addItem( 'mango' );
+addItem( basket, 'mango' );
 console.log( 'after addItem()', basket );
 
 //***** Testing for isFull() *****
@@ -83,3 +95,13 @@ console.log('***** Testing for isFull() *****');
 testArray = ['cat', 'dog', 'bird', 90, 321, true, false];
 console.log( isFull( testArray.length ) );
 console.log( isFull( basket.length ) );
+
+//***** Testing for stretch goal updated addItem() *****
+console.log( '***** Testing for stretch goal updated addItem() *****' );
+
+console.log( addItem( testArray, 1 ) );
+
+empty( testArray );
+
+console.log( addItem( testArray, 1 ) );
+console.log( testArray );
